@@ -1,0 +1,10 @@
+/*Bibliotecas*/
+composer require tymon/jwt-auth
+
+
+
+/* Comandos */
+php artisan jwt:secret
+php artisan make:migration create_users_table
+php artisan migrate
+php -S localhost:8000 -t public
