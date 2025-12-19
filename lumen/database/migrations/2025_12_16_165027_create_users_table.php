@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('role')->default('user');
+            $table->enum('departament', ['rh', 'n3', 'n2', 'n1', 'estoque', 'financeiro', 'infraestrutura', 'cobranca', 'faturamento', 'prefeitura']);
             $table->timestamps();
         });
     }
