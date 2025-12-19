@@ -13,7 +13,7 @@ class User extends Model implements AuthenticatableContract, JWTSubject
 {
     use Authenticatable;
 
-    protected $fillable = ['name', 'email', 'password',  'remember_token'];
+    protected $fillable = ['name', 'email', 'password',  'remember_token', 'role'];
     protected $hidden = ['password', 'remember_token'];
 
     protected $rememberTokenName = 'remember_token';

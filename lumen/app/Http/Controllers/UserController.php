@@ -35,7 +35,7 @@ class UserController extends Controller
     {
         $user = User::findOrFail($id);
 
-        $data = $request->only(['name', 'email']);
+        $data = $request->only(['name', 'email', 'role']);
 
         if ($request->filled('password')) {
             $data['password'] = $request->password;
