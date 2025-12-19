@@ -16,12 +16,13 @@ return new class extends Migration
             $table->string('title');
             $table->text('description')->nullable();
             $table->uuid('created_by');
-            $table->timestamps();
             $table->foreign('created_by')
                 ->references('id')
                 ->on('users')
                 ->onDelete('restrict');
+             $table->timestamps();
         });
+
     }
 
     /**
